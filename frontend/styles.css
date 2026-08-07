@@ -46,7 +46,7 @@ input { border: 0; font-size: 1rem; outline: 0; padding: 8px 0; width: 100%; }
 .section-heading { align-items: end; display: flex; justify-content: space-between; }
 .section-heading a { color: var(--ink); font-weight: 700; }
 .job-grid { display: grid; gap: 16px; grid-template-columns: repeat(3, 1fr); margin-top: 28px; }
-.job-card { background: white; border: 1px solid var(--line); padding: 24px; }
+.job-card { background: white; border: 1px solid var(--line); color: var(--ink); padding: 24px; text-decoration: none; }
 .job-card p { color: var(--muted); margin: 0; }
 .job-card .company { color: var(--ink); font-weight: 700; }
 .job-card span { background: #eef0e8; display: inline-block; font-size: .85rem; margin-top: 20px; padding: 7px 9px; }
@@ -56,6 +56,19 @@ input { border: 0; font-size: 1rem; outline: 0; padding: 8px 0; width: 100%; }
 .steps p { flex: 1; }
 .steps strong { color: var(--accent); display: block; font-size: 1.4rem; margin-bottom: 9px; }
 
+.job-details-page { padding: 42px 0 76px; }
+.back-link { color: var(--muted); font-weight: 700; text-decoration: none; }
+.job-details-hero { align-items: end; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; padding: 42px 0; }
+.job-details-hero h1 { font-size: clamp(2.8rem, 6vw, 4.8rem); }
+.details-layout { align-items: start; display: grid; gap: 72px; grid-template-columns: minmax(0, 2fr) minmax(260px, 1fr); padding-top: 48px; }
+.details-content section { border-bottom: 1px solid var(--line); padding: 0 0 28px; margin-bottom: 28px; }
+.details-content p, .details-content li, .apply-card p { color: var(--muted); line-height: 1.7; }
+.details-content ul { padding-left: 22px; }
+.details-content li { margin-bottom: 9px; }
+.apply-card { background: white; border: 1px solid var(--line); padding: 28px; position: sticky; top: 20px; }
+.apply-card .button { display: block; margin-top: 22px; text-align: center; }
+.small-text { font-size: .8rem; margin-top: 20px; }
+
 @media (max-width: 720px) {
   .site-header, main { margin: 0 20px; }
   nav a:not(.button) { display: none; }
@@ -63,4 +76,7 @@ input { border: 0; font-size: 1rem; outline: 0; padding: 8px 0; width: 100%; }
   .search-form, .steps { flex-direction: column; }
   .job-grid { grid-template-columns: 1fr; }
   .how-it-works { margin: 0 0 35px; padding: 30px; }
+  .job-details-hero { align-items: start; flex-direction: column; gap: 24px; }
+  .details-layout { gap: 26px; grid-template-columns: 1fr; }
+  .apply-card { position: static; }
 }
